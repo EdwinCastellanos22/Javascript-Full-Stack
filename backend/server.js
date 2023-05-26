@@ -1,6 +1,5 @@
 require("dotenv").config();
 const express = require("express");
-const router = require("./urls/routes")
 const routerApi= require("./urls/apiBooks");
 const path = require("path");
 const morgan = require("morgan");
@@ -12,7 +11,6 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname,"public")));
 app.use(morgan("dev"));
-app.use("/psql", router);
 app.use("/mongo", routerApi);
 
 
