@@ -6,8 +6,3 @@ mongoose.connect(process.env.MONGODB_CONNECT, {
 .then(db => console.log("DB Conected!!"))
 .catch(error => console.log(error))
 
-module.exports = {
-    db,
-    pool,
-    bcrypt
-}
